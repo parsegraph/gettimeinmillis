@@ -1,8 +1,8 @@
 var assert = require("assert");
-import getTimeInMillis from "../dist/gettimeinmillis";
+import getTimeInMillis from "../src/index";
 
 describe("getTimeInMillis", function () {
-  it("works", ()=>{
+  it("works", () => {
     assert.ok(!isNaN(getTimeInMillis()));
   });
 });
