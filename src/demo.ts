@@ -1,11 +1,11 @@
-import todo from ".";
+import getTimeInMillis from ".";
 
 document.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById("demo");
   root.style.position = "relative";
 
   const container = document.createElement("div");
-  container.innerHTML = `${todo()}`;
+  container.innerHTML = "Click to animate";
   container.style.position = "absolute";
   container.style.left = "0px";
   container.style.top = "0px";
@@ -19,6 +19,14 @@ document.addEventListener("DOMContentLoaded", () => {
     container.style.color = `rgb(${rand()}, ${rand()}, ${rand()})`;
     container.style.left = `${Math.random() * root.clientWidth}px`;
     container.style.top = `${Math.random() * root.clientHeight}px`;
+
+    const animate = () => {
+      container.innerHTML = `${getTimeInMillis()}`;
+      if (timer) {
+        requestAnimationFrame(animate);
+      }
+    };
+    requestAnimationFrame(animate);
   };
 
   const dot = document.createElement("div");
