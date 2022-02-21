@@ -1,6 +1,6 @@
 {
   "name": "parsegraph-gettimeinmillis",
-  "version": "1.4.4",
+  "version": "1.4.5",
   "description": "Gets current time in milliseconds",
   "main": "dist/src/index.js",
   "types": "dist/src/index.d.ts",
